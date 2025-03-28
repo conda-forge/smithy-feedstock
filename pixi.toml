@@ -4,11 +4,11 @@
 
 [project]
 name = "smithy-feedstock"
-version = "3.44.9"
+version = "3.47.0"
 description = "Pixi configuration for conda-forge/smithy-feedstock"
 authors = ["@conda-forge/smithy"]
 channels = ["conda-forge"]
-platforms = ['linux-64', 'osx-64', 'win-64']
+platforms = ["linux-64", "osx-64", "win-64"]
 
 [dependencies]
 conda-build = ">=24.1"
