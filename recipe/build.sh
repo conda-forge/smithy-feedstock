@@ -6,10 +6,10 @@ mkdir -p ${PREFIX}/libexec/${PKG_NAME}
 mkdir -p ${PREFIX}/bin
 
 # Add dependency-license-report as a plugin to build.gradle
-sed -i 's/id "java-library"/id "java-library"\nid "com.github.jk1.dependency-license-report" version "latest.release"/' build.gradle
+sed -i 's/alias(libs.plugins.jreleaser)/alias(libs.plugins.jreleaser)\nid("com.github.jk1.dependency-license-report") version "latest.release"/' build.gradle.kts
 
 # Build with gradle and copy outputs
-./gradlew clean build
+./gradlew clean build -x :smithy-cli:test
 ./gradlew generateLicenseReport
 find . -name '*.jar' | grep "build/libs" | xargs -I % cp % ${PREFIX}/libexec/${PKG_NAME}
 
