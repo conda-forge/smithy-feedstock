@@ -10,7 +10,7 @@ sed -i 's/alias(libs.plugins.jreleaser)/alias(libs.plugins.jreleaser)\nid("com.g
 
 # Build with gradle and copy outputs
 ./gradlew clean build -x :smithy-cli:test
-./gradlew generateLicenseReport
+./gradlew generateLicenseReport --no-parallel
 find . -name '*.jar' | grep "build/libs" | xargs -I % cp % ${PREFIX}/libexec/${PKG_NAME}
 
 # Create bash and batch files
