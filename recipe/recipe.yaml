@@ -1,5 +1,5 @@
 context:
-  version: "1.75.0"
+  version: "1.75.1"
 
 package:
   name: smithy
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/smithy-lang/smithy/archive/${{ version }}.tar.gz
-  sha256: 73dee74bbbb55b19242a6148bd6f74c2109cfb1246ad5d6287c57a6e0d03cc06
+  sha256: fd41b1b0ed2db0fd0152eb465e83229d33c3d5e320dfb1c52179f842e416512d
 
 build:
   number: 0
